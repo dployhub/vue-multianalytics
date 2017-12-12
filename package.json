@@ -5,7 +5,7 @@
   "main": "./dist/vue-multianalytics.min.js",
   "author": "Glovoapp, Adrian Latorre, Francisco Zurita",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/Glovo/vue-multianalytics",
+  "homepage": "https://github.com/dployhub/vue-multianalytics",
   "scripts": {
     "build": "webpack",
     "demo": "webpack && webpack --config webpack.demo.config.js",
@@ -13,10 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Glovo/vue-multianalytics.git"
+    "url": "https://github.com/dployhub/vue-multianalytics.git"
   },
   "bugs": {
-    "url": "https://github.com/Glovo/vue-multianalytics/issues"
+    "url": "https://github.com/dployhub/vue-multianalytics/issues"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",

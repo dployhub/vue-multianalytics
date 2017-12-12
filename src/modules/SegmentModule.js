@@ -43,7 +43,8 @@ export default class SegmentModule extends BasicModule {
     }
     try {
       let fullProperties = Object.assign(properties, this.superProperties)
-      analytics.page(viewName, properties)
+      // We need to delay the call so that the page path is fully updated before analytics.page() is fired
+      setTimeout(() => { analytics.page(viewName, fullProperties) }, 50)
     } catch (e) {
       if (!(e instanceof ReferenceError)) {
         throw e;

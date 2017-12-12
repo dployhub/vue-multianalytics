@@ -1325,7 +1325,10 @@ module.exports =
 	      }
 	      try {
 	        var fullProperties = Object.assign(properties, this.superProperties);
-	        analytics.page(viewName, properties);
+	        // We need to delay the call so that the page path is fully updated before analytics.page() is fired
+	        setTimeout(function () {
+	          analytics.page(viewName, fullProperties);
+	        }, 50);
 	      } catch (e) {
 	        if (!(e instanceof ReferenceError)) {
 	          throw e;
